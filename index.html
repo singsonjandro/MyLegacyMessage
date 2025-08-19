@@ -5,23 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Legacy Message</title>
   <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" 
+  rel="stylesheet">
 </head>
 <body>
-  <!-- Header -->
-  <header>
-    <div class="logo">
-      <img src="assets/logo.png" alt="My Legacy Message Logo">
-    </div>
-    <nav>
-      <ul>
-        <li><a href="#">The Podcast</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">About Us</a></li>
-        <li><a href="#">Contact Us</a></li>
-      </ul>
-    </nav>
-  </header>
+  <div id="header-placeholder"></div>
 
   <!-- Hero Section -->
   <section class="hero">
@@ -36,7 +24,13 @@
     <h2>Our Story</h2>
     <div class="story-content">
       <div class="story-video">
-        <img src="assets/story-video.png" alt="Story Video">
+        <iframe width="100%" height="315" 
+          src="https://www.youtube.com/embed/juXStZcRojg?si=Z9vj3ucpFIwDIiE3" 
+          title="YouTube video player" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          allowfullscreen>
+        </iframe>
       </div>
       <div class="story-text">
         <p>
@@ -62,18 +56,18 @@
     <div class="podcast-cards">
       <div class="card">
         <img src="assets/podcast.jpeg" alt="Podcast Episode">
-        <p>RTP: The Next Chapter Begins<br>We’ve shared moments that matter, voices that inspire, and lives worth remembering.</p>
-        <a href="#" class="btn-dark">Listen Now</a>
+        <p><strong>Ep. 111 OG:My Husband Mike - Rachell Wall</strong><br>We’ve shared moments that matter, voices that inspire, and lives worth remembering.</p>
+        <a href="https://open.spotify.com/episode/3WeffmHZNsKbzRKS6whTxb?si=SFvgeGbOSPmmuZX5bIil7w" class="btn-dark">Listen Now</a>
       </div>
       <div class="card">
         <img src="assets/podcast.jpeg" alt="Podcast Episode">
-        <p>RTP: The Next Chapter Begins<br>We’ve shared moments that matter, voices that inspire, and lives worth remembering.</p>
-        <a href="#" class="btn-dark">Listen Now</a>
+        <p><strong>Ep. 110 OG:My Mum Susan - Samantha</strong><br>We’ve shared moments that matter, voices that inspire, and lives worth remembering.</p>
+        <a href="https://open.spotify.com/episode/56rKwS3AUZBnis0gDfmK97?si=VlB_9A0eTMO_XwRO_-JG1w" class="btn-dark">Listen Now</a>
       </div>
       <div class="card">
         <img src="assets/podcast.jpeg" alt="Podcast Episode">
-        <p>RTP: The Next Chapter Begins<br>We’ve shared moments that matter, voices that inspire, and lives worth remembering.</p>
-        <a href="#" class="btn-dark">Listen Now</a>
+        <p><strong>Ep. 109 OG:My Husband Kev - Casey Guiheen</strong><br>We’ve shared moments that matter, voices that inspire, and lives worth remembering.</p>
+        <a href="https://open.spotify.com/episode/5Y7cAtRnWXscQQ4sVP1KBb?si=fPihq0WKQnu6VVW-OV-oNQ" class="btn-dark">Listen Now</a>
       </div>
     </div>
   </section>
@@ -84,10 +78,16 @@
       <div>
         <h3>Listen Now</h3>
         <div class="icons">
-          <img src="spotify.png" alt="Spotify">
-          <img src="apple.png" alt="Apple">
-          <img src="google.png" alt="Google">
-        </div>
+          <a href="https://open.spotify.com/show/60rRTCcC2PVENOTWKVSHJs?si=9ad9e6bddfba40bc" target="_blank">
+            <img src="assets/spotify.png" alt="Spotify">
+          </a>
+          <a href="https://podcasts.apple.com/us/podcast/remembering-them-podcast/id1649936979" target="_blank">
+             <img src="assets/apple.png" alt="Apple">
+          </a>
+          <a href="https://www.youtube.com/@rememberingthempodcast" target="_blank">
+             <img src="assets/youtube.png" alt="YouTube">
+          </a>
+      </div>
       </div>
       <div>
         <h2>3,760+</h2>
@@ -110,35 +110,21 @@
     <div class="faq-item">Can I change my video recording?</div>
   </section>
 
-  <!-- Footer -->
-  <footer>
-    <div class="footer-content">
-      <div class="footer-info">
-        <img src="logo.png" alt="Logo">
-        <p>
-          My Legacy Message is a service that delivers a video message recorded by you to 
-          your loved ones upon your passing.
-        </p>
-      </div>
-      <div class="footer-links">
-        <h4>Pages</h4>
-        <ul>
-          <li><a href="#">The Podcast</a></li>
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">Contact Us</a></li>
-        </ul>
-      </div>
-      <div class="footer-contact">
-        <h4>Contact Us</h4>
-        <p><a href="mailto:hello@mylegacymessage.com.au">hello@mylegacymessage.com.au</a></p>
-        <p>+61 121323124</p>
-        <div class="socials">
-          <img src="facebook.png" alt="Facebook">
-          <img src="spotify.png" alt="Spotify">
-          <img src="youtube.png" alt="YouTube">
-        </div>
-      </div>
-    </div>
-  </footer>
+  <div id="footer-placeholder"></div>
+  <script>
+  // Load header
+  fetch("header.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("header-placeholder").innerHTML = data;
+    });
+
+  // Load footer
+  fetch("footer.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("footer-placeholder").innerHTML = data;
+    });
+  </script>
 </body>
 </html>

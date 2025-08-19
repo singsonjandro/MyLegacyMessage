@@ -75,10 +75,12 @@ header nav a {
   margin-top: 2rem;
   align-items: center;
 }
-.story-video img {
+.story-video img,
+.story-video video,
+.story-video iframe {
   width: 100%;
   max-width: 30em;   /* limit width */
-  max-height: 20em;  /* limit height */
+  max-height: 25em;  /* limit height */
   border-radius: 10px;
   display: block;
   margin: 0 auto;     /* center inside flex */
@@ -147,6 +149,13 @@ header nav a {
   font-weight: bold;
 }
 
+.stats .icons img {
+  height: 24px;
+  margin-right: 0.5rem;
+  margin-top: 5px;
+  gap: 1.2em;
+}
+
 /* FAQ */
 .faq {
   padding: 3rem 5%;
@@ -172,7 +181,7 @@ footer {
   gap: 2rem;
 }
 .footer-info img {
-  height: 40px;
+  height: 7em;
   margin-bottom: 1rem;
 }
 .footer-links ul {
@@ -185,4 +194,9 @@ footer {
 .footer-contact .socials img {
   height: 24px;
   margin-right: 0.5rem;
+}
+
+strong {
+  font-weight: 700;
+  color: #3a004d; /* your theme purple */
 }
