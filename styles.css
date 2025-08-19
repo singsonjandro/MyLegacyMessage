@@ -149,11 +149,11 @@ header nav a {
   font-weight: bold;
 }
 
-.stats .icons img {
-  height: 1em;
+.stats-content .icons img {
+  height: 2em;
   margin-right: 0.5rem;
   margin-top: 5px;
-  gap: 1.2em;
+  gap: 1.4em;
 }
 
 /* FAQ */
