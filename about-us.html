@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | My Legacy Message</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" 
+  rel="stylesheet">
+</head>
+<body>
+  <div id="header-placeholder"></div>
+  <section class="hero-video">
+  <div class="video-wrapper">
+    <!-- Poster Image -->
+    <div class="video-poster" id="video-poster">
+      <img src="assets/about-us-hero.jpg" alt="Hero Thumbnail">
+      <button class="play-btn" id="play-btn">&#9658;</button>
+    </div>
+
+    <!-- YouTube iframe (hidden at first) -->
+    <div class="video-embed" id="video-embed" style="display:none;">
+      <iframe
+        id="youtube-video"
+        src="https://www.youtube.com/embed/juXStZcRojg?rel=0&modestbranding=1"
+        frameborder="0"
+        allow="autoplay; encrypted-media; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+    </div>
+  </div>
+</section>
+
+<section class="about-section">
+    <h2>About Us</h2>
+    <p>
+      At My Legacy Message, we believe love lives on through the words we leave behind.
+      Our service gives you the opportunity to record heartfelt video messages that become
+      timeless keepsakes for your family. These messages go beyond memories—they are gifts
+      of comfort, wisdom, and connection. They allow your loved ones to hear your voice,
+      feel your presence, and create a lasting legacy that future generations can treasure.
+    </p>
+  </section>
+
+ <!-- Mission & Vision -->
+  <section class="mission-vision">
+    <div class="vision">
+    <img src="assets/about-us-vision.jpg" alt="Our Vision">
+    <div class="text">
+      <h3><span class="icon">🎥</span> Vision</h3>
+      <p>   We envision a service that allows families to capture and preserve meaningful video
+          messages from their loved ones before it’s too late. These recordings ensure that
+          future generations can remember, learn from, and celebrate the lives and stories of
+          those they hold dear.</p>
+    </div>
+  </div>
+
+  <!-- Mission (text left, image right) -->
+  <div class="mission">
+    <div class="text">
+      <h3><span class="icon">📌</span> Mission</h3>
+        <p>
+          We provide a reliable service to create and securely store video messages, ensuring
+          they last and are delivered at the right time, offering comfort and cherished memories
+          to family and friends.
+        </p>
+    </div>
+    <img src="assets/about-us-mission.jpg" alt="Our Mission">
+  </section>
+
+  <!-- Meet the Team -->
+  <section class="team">
+    <h2>Meet the Team</h2>
+    <div class="team-members">
+      <div class="member">
+        <img src="assets/ryan.jpg" alt="Ryan Thwaites">
+        <h4>Ryan Thwaites</h4>
+        <p>Host of Remembering Them</p>
+      </div>
+      <div class="member">
+        <img src="assets/mark.jpg" alt="Mark Cecil">
+        <h4>Mark Cecil</h4>
+        <p>CEO My Legacy Message / Host</p>
+      </div>
+      <div class="member">
+        <img src="assets/luke.jpg" alt="Luke Cecil">
+        <h4>Luke Cecil</h4>
+        <p>Host of Remembering Them</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Story -->
+  <section class="our-story">
+    <h2>Our Story</h2>
+
+    <div class="story-block">
+      <p>
+        <strong>Mark Cecil</strong> lost his dad to <strong>dementia</strong> in 2021.
+        He started the <strong>Remembering Them podcast</strong> with a friend to share stories of loss
+        and speak with guests about their experiences, offering comfort to others while raising
+        awareness of different illnesses. Mark wishes he had recorded his dad’s stories before his
+        memory faded—something to preserve for his children and future generations. From this
+        realisation, <strong>My Legacy Message</strong> was born.
+      </p>
+    </div>
+
+    <div class="story-block">
+      <p>
+        <strong>Ryan Thwaites</strong> lost both of his best friends young—Paul at 21 from heart failure,
+        and Scott ten years later at 31 from melanoma. As a <strong>co-host of the Remembering Them podcast</strong>,
+        he shares a passion for speaking with others experiencing grief and exploring how they cope,
+        in hopes it may help others.
+      </p>
+    </div>
+
+    <div class="story-block">
+      <p>
+        <strong>Luke Cecil</strong> lost his dad in 2021 and became <strong>co-host of the Remembering Them podcast</strong> in 2024.
+        He hopes to support others facing similar journeys, raise awareness about <strong>dementia</strong>,
+        and encourage families to preserve their memories through the <strong>My Legacy Message service</strong>.
+      </p>
+    </div>
+  </section>
+
+<div id="footer-placeholder"></div>
+  <script>
+  // Load header
+  fetch("header.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("header-placeholder").innerHTML = data;
+    });
+
+  // Load footer
+  fetch("footer.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("footer-placeholder").innerHTML = data;
+    });
+
+  const playBtn = document.getElementById('play-btn');
+  const poster = document.getElementById('video-poster');
+  const embed = document.getElementById('video-embed');
+  const iframe = document.getElementById('youtube-video');
+
+  playBtn.addEventListener('click', () => {
+    poster.style.display = 'none';
+    embed.style.display = 'block';
+    iframe.src = "https://www.youtube.com/embed/juXStZcRojg?autoplay=1&rel=0&modestbranding=1&controls=0";
+  });
+  </script>
+

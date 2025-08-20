@@ -211,7 +211,7 @@ header nav a {
 }
 
 .faq-answer {
-  display: none ;   /* ✅ hide all answers on page load */
+  display: none;
   padding: 1rem;
   font-family: 'Poppins', sans-serif;
   font-size: 1rem;
@@ -271,7 +271,153 @@ footer {
 strong {
   font-weight: 700;
   color: #3a004d; /* your theme purple */
+}
 
+/* About us */
+/* Hero Video */
+
+.hero-video {
+  position: relative;
+  width: 100%;
+  height: 75vh; /* full screen height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+  overflow: hidden;
+}
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.video-poster,
+.video-embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.video-poster img,
+.video-embed iframe {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: none;
+}
+.play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3rem;
+  background: rgba(58, 0, 77, 0.8);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+}
+.play-btn:hover {
+  background: #3a004d;
 }
 
 
+/* About Section */
+.about-section {
+  padding: 3em 10em;
+  text-align: center;
+  font-size: 1em;
+}
+.about-section h2 {
+  font-size: 2em;
+  margin-bottom: 1em;
+}
+
+/* Mission & Vision */
+.mission-vision {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2em;
+  padding: 3em 10em;
+}
+
+.mission-vision img {
+  width: 100%;
+  border-radius: 12px;
+  align-items: center;
+}
+
+.mission-vision .text {
+  margin-top: 1em;
+  font-size: 1em;
+}
+
+.mission-vision h3 {
+  font-size: 2em;
+  color: #3a004d;
+  margin-bottom: 0.5em;
+}
+
+/* Vision: img left, text right */
+.vision {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 2em;
+}
+
+/* Mission: text left, img right */
+.mission {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 5em;
+}
+
+/* Team */
+.team {
+  text-align: center;
+  padding: 3em 1.5em;
+}
+.team-members {
+  display: flex;
+  justify-content: center;
+  gap: 2.5em;
+  flex-wrap: wrap;
+}
+.team .member img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.team .member h4 {
+  margin-top: 1em;
+  font-size: 1.2rem;
+}
+
+/* Our Story */
+.our-story {
+  background: #fafafa;
+  padding: 3em 1.5em;
+}
+.our-story h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2em;
+}
+.our-story .story-block {
+  max-width: 800px;
+  margin: 0 auto 2em auto;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+.our-story strong {
+  color: #3a004d;
+}
