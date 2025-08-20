@@ -46,6 +46,7 @@ header nav a {
   text-align: center;
   position: relative;
   font-size: 1.5em;
+  font-family: 'Lora', serif;
 }
 .hero-overlay {
   background: #1d0453a0;
@@ -68,6 +69,11 @@ header nav a {
 .our-story {
   padding: 3rem 5%;
   text-align: center;
+}
+
+.our-story h2 {
+  font-size: 2em;
+  font-family: 'Lora', serif;
 }
 .story-content {
   display: flex;
@@ -108,6 +114,11 @@ header nav a {
   padding: 3rem 5%;
   text-align: center;
 }
+
+.podcast h2 {
+  font-size: 2em;
+  font-family: 'Lora', serif;
+}
 .podcast-cards {
   display: flex;
   gap: 1.5rem;
@@ -123,6 +134,11 @@ header nav a {
 .card img {
   width: 100%;
   border-radius: 10px;
+}
+.card p strong {
+  color: #6c2a8c; /* your theme purple */
+  font-family: 'Lora', serif;
+  font-size: 1.15em;
 }
 .btn-dark {
   background: #3a004d;
@@ -149,23 +165,59 @@ header nav a {
   font-weight: bold;
 }
 
-.stats-content .icons img {
+.stats .icons img {
   height: 2em;
   margin-right: 0.5rem;
   margin-top: 5px;
-  gap: 1.4em;
+  gap: 1.2em;
 }
 
 /* FAQ */
 .faq {
   padding: 3rem 5%;
 }
-.faq-item {
-  background: #f4f4f4;
-  padding: 1rem;
-  margin: 0.5rem 0;
-  border-radius: 5px;
+
+.faq h2 {
+  margin-bottom: 1rem;
+  font-family: 'Lora', serif;
   font-weight: 600;
+}
+
+.faq-item {
+  margin-bottom: 0.5rem;
+  border-radius: 5px;
+  overflow: hidden;
+  background: #f4f4f4;
+}
+
+.faq-question {
+  width: 100%;
+  padding: 1rem;
+  text-align: left;
+  font-family: 'Lora', serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: none;
+  background: #f4f4f4;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-toggle {
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+.faq-answer {
+  display: none;
+  padding: 1rem;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  background: #fff;
+  border-top: 1px solid #ddd;
 }
 
 /* Footer */
@@ -175,10 +227,10 @@ footer {
   padding: 2rem 5%;
 }
 .footer-content {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, 2fr); /* three equal columns */
+  gap: 10rem;
+  align-items: start;
 }
 .footer-info img {
   height: 7em;
@@ -191,13 +243,32 @@ footer {
 .footer-links a {
   color: #fff;
 }
+.footer-links h4 {
+  margin-bottom: 0.5rem;
+  font-family: 'Lora', serif;
+  font-size: 2em;
+  font-weight: 600;
+  color:  #a12ac8;
+}
 .footer-contact .socials img {
-  height: 24px;
+  height: 2em;
+  margin-top: 1em;
   margin-right: 0.5rem;
+}
+.footer-contact h4 {
+  font-family: 'Lora', serif;
+  font-size: 2em;
+  font-weight: 600;
+  color: #a12ac8;
+}
+.footer-contact p a{
+  margin-top: 0.5rem;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1em;
+  color: #fff;
 }
 
 strong {
   font-weight: 700;
   color: #3a004d; /* your theme purple */
-
 }

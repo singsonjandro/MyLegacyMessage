@@ -102,13 +102,73 @@
 
   <!-- FAQ -->
   <section class="faq">
-    <h2>Frequently Asked Questions</h2>
-    <div class="faq-item">What is involved in the set up?</div>
-    <div class="faq-item">How will my information be stored?</div>
-    <div class="faq-item">What happens if I miss a payment?</div>
-    <div class="faq-item">After I pass away, when does subscription payments cease?</div>
-    <div class="faq-item">Can I change my video recording?</div>
-  </section>
+  <h2>Frequently Asked Questions</h2>
+
+  <div class="faq-item">
+    <button class="faq-question">
+      What is involved in the set up?
+      <span class="faq-toggle">+</span>
+    </button>
+    <div class="faq-answer">
+      <p>We will obtain your methods of contact – email and phone number, 
+        and two separate relatives and/or friends contact details for the annual check-in service. 
+        We will then send out confirmation of service and obtain authorisation to contact your nominated friends or family members.   
+      </p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">
+      How will my information be stored?
+      <span class="faq-toggle">+</span>
+    </button>
+    <div class="faq-answer">
+      <p>Your videos will be stored online Cloud Storage and a hard copy of your video/s
+         will be stored separately on an external hard drive in a fireproof safe.  
+      </p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">
+      What happens if I miss a payment?
+      <span class="faq-toggle">+</span>
+    </button>
+    <div class="faq-answer">
+      <p>We will re-try to debit again following month and contact you to discuss. 
+        If unsuccessful for a 3rd attempt, all material will be sent back to you and 
+        removed permanently from our system. 
+      </p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">
+      After I pass away, when does subscription payments cease?
+      <span class="faq-toggle">+</span>
+    </button>
+    <div class="faq-answer">
+      <p>As soon as we confirm with a family member or friend that you have passed away, 
+        video messages will be released, and payments stopped immediately.  
+      </p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">
+      Can I change my video recording?
+      <span class="faq-toggle">+</span>
+    </button>
+    <div class="faq-answer">
+      <p>Yes, recording of new videos can be completed at any time. 
+        When life changes you may want to update your videos. For example, your kids finish school, 
+        you reach a significant milestone, or you wish to add more video recordings. 
+        The cost of replacing existing videos are included in your monthly subscription.  
+        Additional videos will be added to your monthly subscription.  
+      </p>
+    </div>
+  </div>
+</section>
 
   <div id="footer-placeholder"></div>
   <script>
@@ -125,6 +185,23 @@
     .then(data => {
       document.getElementById("footer-placeholder").innerHTML = data;
     });
+
+   document.querySelectorAll(".faq-question").forEach(button => {
+  button.addEventListener("click", () => {
+    const faqItem = button.parentElement;
+    const answer = faqItem.querySelector(".faq-answer");
+    const toggle = button.querySelector(".faq-toggle");
+
+    // Toggle only this one
+    if (answer.style.display === "block") {
+      answer.style.display = "none";
+      toggle.textContent = "+";
+    } else {
+      answer.style.display = "block";
+      toggle.textContent = "–";
+    }
+  });
+});
   </script>
 </body>
 </html>
