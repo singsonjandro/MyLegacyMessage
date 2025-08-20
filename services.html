@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services | My Legacy Message</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" 
+  rel="stylesheet">
+    <div id="header-placeholder"></div>
+</head>
+<body>
+
+  <section class="how-it-works">
+            <h2>How it works</h2>
+            <div class="step-container">
+                <div class="step">
+                    <h3>Record your Video</h3>
+                </div>
+                <div class="step">
+                    <h3>Send it to Us</h3>
+                </div>
+                <div class="step">
+                    <h3>Secure Storage</h3>
+                </div>
+            </div>
+
+            <div class="how-it-works-text">
+              <h4>How It Works</h4>
+              <ol>
+                <li>Record Your Video(s) – Create the videos you want to share.</li>
+                <li>Send to Us – Upload or send your videos securely.</li>
+                <li>Secure Storage – Videos are safely stored online and as a hard copy.</li>
+                <li>Three-Phase Annual Check-In
+              <ul>
+                <li>Email: Each year, we send you a check-in email.</li>
+                <li>Phone: If there's no response within 1 week, we call the number you've provided.</li>
+                <li>Friend/Family Contact: If there's still no response after another week, we contact the friend or family member you've nominated.</li>
+                <li>Outcome: Your nominated contact will confirm whether you are unreachable (e.g., overseas) or have unfortunately passed. At that point, all your videos will be released to the people you've designated to receive them.</li>
+              </ul>
+              </li>
+              </ol>
+</div>
+        </section>
+
+        <section class="subscription">
+            <h2>Ongoing Storage & Annual Review Subscription</h2>
+            <ul>
+                <li><p>$13.95 per month</p></li>
+                <li><p>Additional videos: $1 per month, per separate video</p></li>
+                <li><p>All prices are in AUD, inclusive of GST, and billed annually</p></li>
+            </ul>
+            <h4>How It Works - Examples</h4>
+            <ul>
+                <li><p>Example 1: John records a message for his wife and sends it to My Legacy Message for secure storage. He subscribes to the annual check-in review.</p>
+                    <ul>
+                        <li><p>Cost: $13.95 per month</p></li>
+                    </ul>
+                </li>
+                <li><p>Example 2: Chris records multiple messages: one for his wife and one for each of his two adult children, to be delivered separately upon his passing.</p>
+                    <ul>
+                        <li><p>Cost: $15.95 per month</p></li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+    <div id="footer-placeholder"></div>
+  <script>
+  // Load header
+  fetch("header.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("header-placeholder").innerHTML = data;
+    });
+
+  // Load footer
+  fetch("footer.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("footer-placeholder").innerHTML = data;
+    });
+    </script>
+</body>
