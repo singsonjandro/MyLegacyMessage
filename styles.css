@@ -521,7 +521,7 @@ strong {
 
 .form-submit button {
   width: 100%;
-  max-width: 300px;
+  max-width: 90em;
   padding: 0.9rem 1.5rem;
   background: #6b21a8;
   color: white;
