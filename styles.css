@@ -1014,7 +1014,6 @@ h2 {
     height: auto;        /* let it resize naturally */
     max-height: 60vh;    /* avoid covering whole screen */
   }
-}
   
   .how-it-works,
   .check-in,
@@ -1050,7 +1049,7 @@ h2 {
     font-size: 1em;
     margin-left: 0.5em;
   }
-
+}
 
 @media (max-width: 468px) {
   /* Even tighter layout for phones */
