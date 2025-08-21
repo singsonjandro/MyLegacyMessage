@@ -21,6 +21,8 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 5%;
+  font-family: 'Lora', serif;
+  font-size: 1.3em;
 }
 header .logo img {
   height: 5em;
@@ -158,9 +160,28 @@ header nav a {
 }
 .stats-content {
   display: flex;
-  justify-content: space-between;
-  text-align: center;
+  justify-content: flex-start; /* items start from left */
+  align-items: center;         /* vertically center items */
+  gap: 2rem;                   /* space between icon and links */
+  text-align: left;            /* better alignment for links */
 }
+
+.stats .podcast-icon img {
+  width: 5em;       /* fix width */
+  max-width: 100%;  /* responsive */
+  border-radius: 3em;
+}
+
+.stats .links {
+  display: flex;
+  flex-direction: column; /* keep h3 on top and icons below */
+}
+
+.stats-total {
+  flex: 1; /* take remaining space */
+  text-align: center; /* center text */
+}
+
 .stats h2 {
   font-size: 2rem;
   font-weight: bold;
@@ -171,6 +192,11 @@ header nav a {
   margin-right: 0.5rem;
   margin-top: 5px;
   gap: 1.2em;
+}
+.stats .podcast-icon img {
+  width: 200%;
+  max-width: 5em;
+  border-radius: 3em;
 }
 
 /* FAQ */
@@ -280,7 +306,7 @@ strong {
 .hero-video {
   position: relative;
   width: 100%;
-  height: 75vh; /* full screen height */
+  height: 120vh; /* full screen height */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -309,6 +335,11 @@ strong {
   height: 100%;
   object-fit: cover;
   border: none;
+}
+
+.video-poster img {
+  object-position: bottom;
+  
 }
 .play-btn {
   position: absolute;
@@ -388,11 +419,23 @@ strong {
   text-align: center;
   padding: 3em 1.5em;
 }
+.team h2 {
+  font-size: 2em;
+  margin-bottom: 1em;
+  font-family: 'Lora', serif;
+}
 .team-members {
   display: flex;
   justify-content: center;
   gap: 2.5em;
   flex-wrap: wrap;
+}
+.team .member-mark img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top;
 }
 .team .member img {
   width: 180px;
@@ -772,5 +815,299 @@ strong {
 
   .menu-toggle {
     display: none; /* hide burger menu */
+  }
+}
+
+/* Services */
+/* General */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  color: #4a0d4a;
+  margin-bottom: 1rem;
+}
+
+/* Hero */
+
+.hero-services {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+.hero-services img {
+  width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  height: auto;
+  display: block;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  font-size: 1.5em;
+  font-family: 'Lora', serif;
+  object-fit: cover;
+}
+
+/* Steps (How it works + Check-in) */
+.how-it-works {
+  padding: 0 10em; /* add side spacing */
+}
+
+.how-it-works h2 {
+  color: #4a0d4a;
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  margin-left: 0em;
+  font-family: 'Lora', serif;
+}
+
+.steps {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.step {
+  background: #f0efef;
+  border-radius: 8px;
+  padding: 0.5rem;
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start; /* aligns icon with top of text */
+}
+
+.step .icon {
+  width: 3em;   /* adjust size as needed */
+  height: 3em;
+  object-fit: contain; /* keep aspect ratio */
+  margin-top: 0.25rem;  /* fine-tune alignment if needed */
+  flex-shrink: 0;
+  padding-left: 1em;
+}
+
+.step strong {
+  color: #4a0d4a;
+  display: block;
+  font-family: 'Lora', serif;
+  font-size: 1.5em;
+}
+.step p {
+  margin: 0;
+  font-size: 1.2em;
+  font-family: 'Poppins', sans-serif;
+}
+
+.check-in {
+  padding: 0 10em; /* add side spacing */
+}
+
+.check-in h2 {
+  color: #4a0d4a;
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  margin-left: 0em;
+  font-family: 'Lora', serif;
+}
+
+/* Pricing */
+.pricing {
+  padding: 0 10em; /* add side spacing */
+}
+
+.pricing h2 {
+  color: #4a0d4a;
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  margin-left: 0em;
+  font-family: 'Lora', serif;
+}
+
+.pricing p {
+  font-size: 1.2em;
+  margin-bottom: 0.5rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.price-box {
+  background: #4a0d4a;
+  color: white;
+  border-radius: 8px;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column; /* stack children vertically */
+}
+
+.price-box h3 {
+  font-size: 2rem;       /* make it bigger */
+  font-weight: bold;
+  color: #FF66C4;        /* light purple */
+  margin-bottom: 0.5rem;   /* spacing before the list */
+  text-align: left;    /* optional: center align */
+}
+
+.price-box ul {
+  margin-top: -0.1em;
+  padding-left: 1.2rem;
+  margin-left: 1em;
+}
+
+.price-box li {
+  margin-bottom: 0.5rem;
+  font-size: 1.2em;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Examples */
+.examples {
+  padding: 2em 10em; /* add side spacing */
+}
+
+.examples h2 {
+  color: #4a0d4a;
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  margin-left: 0em;
+  font-family: 'Lora', serif;
+}
+.examples .example {
+  background: #f0efef;
+  border-radius: 8px;
+  padding: 1rem;
+  padding-left: 2em;
+  margin-bottom: 1rem;
+}
+
+.example p{
+  margin-left: 1em;
+  font-size: 1.2em;
+  font-family: 'Poppins', sans-serif;
+}
+
+.example li {
+  margin-left: 3em;
+  font-family: 'Poppins', sans-serif;
+}
+
+.examples .cost {
+  color: #AD1AAC;
+  font-weight: bold;
+}
+
+/* Responsive */
+/* Responsive */
+@media (max-width: 768px) {
+  /* Reduce side paddings */
+  .hero-services img {
+    height: auto;        /* let it resize naturally */
+    max-height: 60vh;    /* avoid covering whole screen */
+  }
+}
+  
+  .how-it-works,
+  .check-in,
+  .pricing,
+  .examples {
+    padding: 0 2em;
+  }
+
+  .step {
+    flex-direction: row; /* still keep icon + text inline */
+    padding: 1rem;
+  }
+
+  .step strong {
+    font-size: 1.2em;
+  }
+
+  .step p {
+    font-size: 1em;
+  }
+
+  .price-box h3 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .examples .example {
+    padding: 1rem;
+  }
+
+  .example p,
+  .example li {
+    font-size: 1em;
+    margin-left: 0.5em;
+  }
+
+
+@media (max-width: 468px) {
+  /* Even tighter layout for phones */
+   .hero-services img {
+    height: auto;
+    max-height: 40vh;    /* smaller hero for phones */
+  }
+  
+  .how-it-works,
+  .check-in,
+  .pricing,
+  .examples {
+    padding: 0 1em;
+  }
+
+  .step {
+    flex-direction: column; /* stack icon on top for narrow screens */
+    align-items: center;
+    text-align: center;
+  }
+
+  .step .icon {
+    margin: 0 auto 0.5rem auto;
+    padding-left: 0; /* remove desktop offset */
+    width: 2.5em;
+    height: 2.5em;
+  }
+
+  .step strong {
+    font-size: 1.1em;
+  }
+
+  .step p {
+    font-size: 0.95em;
+  }
+
+  .price-box {
+    padding: 1rem;
+  }
+
+  .price-box h3 {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+
+  .price-box ul {
+    margin-left: 0;
+    padding-left: 1em;
+  }
+
+  .examples .example {
+    padding: 1rem;
+  }
+
+  .example p,
+  .example li {
+    font-size: 0.95em;
+    margin-left: 0;
   }
 }
