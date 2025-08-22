@@ -822,16 +822,50 @@ strong {
     padding: 0.1vh 0.1vh;
   }
 
-  .btn-outline,
+  .our-story h2 {
+    font-size: 1.5em;
+  }
+  .story-text {
+    font-size: 1.1em;
+    margin-right: 0;
+    text-align: center;
+    justify-content: center;
+  }
+  
+  .about-us-our-story .story-block {
+    margin: 0 1em 5em 1vh;
+    gap: 1em;
+  }
+
+  .about-us-our-story .story-text p {
+    font-size: 1em;
+  }
+  .podcast h2 {
+    font-size: 1.5em;
+  }
+
+  .podcast p {
+    font-size: 1.1em;
+  }
+ 
   .btn-solid,
   .btn-dark {
     width: 100%;
     text-align: center;
   }
 
+  .btn-solid,
+  .btn-outline {
+    width: 40%;
+  }
+
   .about-section,
   .mission-vision {
     padding: 1.5em;
+  }
+
+  .faq-question {
+    color: #000;
   }
 
   .footer-content {
@@ -841,6 +875,18 @@ strong {
 
   .footer-info img {
     height: 5em;
+  }
+
+  .hero-video {
+    height:30vh; /* reduce height on small screens */
+    width: auto;
+  }
+  .video-wrapper {
+    object-position: top; /* reduce height on small screens */
+  }
+  .video-poster img,
+  .video-embed iframe {
+    height: 100%;
   }
 }
 
