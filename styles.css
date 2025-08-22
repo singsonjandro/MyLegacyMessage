@@ -857,155 +857,239 @@ h2 {
   object-fit: cover;
 }
 
-/* Steps (How it works + Check-in) */
+/*how it works */
+
 .how-it-works {
-  padding: 0 10em; /* add side spacing */
+  padding: 4vh 2vh;
+  background: #fff;
 }
 
 .how-it-works h2 {
-  color: #4a0d4a;
-  font-size: 2em;
-  font-weight: bold;
-  margin-bottom: 1rem;
-  margin-left: 0em;
+  text-align: left;
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  margin-left: 25vh;
   font-family: 'Lora', serif;
+  color: #2E0045;
 }
 
-.steps {
+.how-it-works .steps {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4em; /* control spacing between circle+arrow groups */
+  flex-wrap: wrap;
+}
+
+.how-it-works .step {
+  text-align: center;
+  max-width: 30vh;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-  margin-bottom: 2rem;
+  align-items: center;
 }
 
-.step {
-  background: #f0efef;
-  border-radius: 8px;
-  padding: 0.5rem;
+.how-it-works .circle img {
+  width: 40vh;   /* fixed size */
+  height: 40vh;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.how-it-works .arrow {
+  font-size: 4rem;
+  color: #AD1AAC;
+  font-weight: bold;
   display: flex;
-  gap: 0.75rem;
-  align-items: flex-start; /* aligns icon with top of text */
+  align-items: center;
+  justify-content: center;
+  height: 40vh;   /* match circle height exactly */
+  margin-bottom: 1.5em;
 }
 
-.step .icon {
-  width: 3em;   /* adjust size as needed */
-  height: 3em;
-  object-fit: contain; /* keep aspect ratio */
-  margin-top: 0.25rem;  /* fine-tune alignment if needed */
-  flex-shrink: 0;
-  padding-left: 1em;
-}
-
-.step strong {
-  color: #4a0d4a;
-  display: block;
-  font-family: 'Lora', serif;
-  font-size: 1.5em;
-}
-.step p {
-  margin: 0;
+.how-it-works p {
   font-size: 1.2em;
-  font-family: 'Poppins', sans-serif;
+  margin-top: 1vh;
+  margin-left: 0; /* remove offset so it centers under image */
+}
+.how-it-works strong {
+  color: #4a0d4a; /* purple */
+  font-weight: bold;
+  font-family: 'Lora', serif;
+  font-size: 1.3em;
+  margin-bottom: 0.1em;
+  margin-top: 1vh;
 }
 
+/* --- Three-Phase Annual Check-In --- */
 .check-in {
-  padding: 0 10em; /* add side spacing */
+  padding: 3rem 2rem;
+  background: #f9f9f9;
 }
 
 .check-in h2 {
-  color: #4a0d4a;
-  font-size: 2em;
-  font-weight: bold;
-  margin-bottom: 1rem;
-  margin-left: 0em;
+  text-align: left;
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  margin-left: 20vh;
   font-family: 'Lora', serif;
+  color: #2E0045;
+}
+.check-steps {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* always 2 columns */
+  gap: 1.5vh;
+  max-width: 160vh;
+  margin: 0 auto;
+  width: 100%;
+}
+.check-step {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 3em;
+  text-align: left;
+  display: block;
+  align-items: center;
+  gap: 1rem;
+}
+.check-step img {
+  width: 50px;
+  height: auto
 }
 
-/* Pricing */
-.pricing {
-  padding: 0 10em; /* add side spacing */
-}
-
-.pricing h2 {
-  color: #4a0d4a;
-  font-size: 2em;
-  font-weight: bold;
-  margin-bottom: 1rem;
-  margin-left: 0em;
-  font-family: 'Lora', serif;
-}
-
-.pricing p {
-  font-size: 1.2em;
-  margin-bottom: 0.5rem;
-  font-family: 'Poppins', sans-serif;
-}
-
-.price-box {
-  background: #4a0d4a;
-  color: white;
-  border-radius: 8px;
-  padding: 0.5rem;
+.check-header {
   display: flex;
-  flex-direction: column; /* stack children vertically */
-}
-
-.price-box h3 {
-  font-size: 2rem;       /* make it bigger */
-  font-weight: bold;
-  color: #FF66C4;        /* light purple */
-  margin-bottom: 0.5rem;   /* spacing before the list */
-  text-align: left;    /* optional: center align */
-}
-
-.price-box ul {
-  margin-top: -0.1em;
-  padding-left: 1.2rem;
-  margin-left: 1em;
-}
-
-.price-box li {
+  align-items: center;
+  gap: 0.75rem;
   margin-bottom: 0.5rem;
-  font-size: 1.2em;
+}
+.check-header strong {
+  color: #4a0d4a; /* purple */
+  font-weight: bold;
+  font-family: 'Lora', serif;
+  font-size: 1.2rem;
+}
+
+.check-header img {
+  width: 40px;
+  height: auto;
+}
+
+/* --- Pricing & Examples --- */
+.pricing-examples {
+  padding: 3rem 2rem;
+  background: #fff;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.pricing-examples h2 {
+  font-size: 1.8rem;
+  color: #2E0045;
+  margin-bottom: 0.5rem;
+  font-family: 'Lora', serif;
+}
+
+
+.pricing-examples p {
+  margin-bottom: 2h;
+  color: #333;
+}
+
+.pricing-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2rem;
+  align-items: start;
+  margin-top: 1em;
+}
+
+/* Pricing Card */
+.pricing-card {
+  background: #2E0045;
+  color: #fff;
+  border-radius: 10px;
+  padding: 2rem;
+  position: relative;
+}
+
+.price-tag {
+  background: #AD1AAC;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.4em;
+  padding: 0.5rem 2em;
+  border-radius: 6px 6px 6px 6px;
+  display: inline-block;
+  position: absolute;
+  top: 0em;
+  left: 0em;
+  font-family: 'Lora', serif;
+}
+
+.pricing-card ul {
+  margin: 2rem 0;
+  padding-left: 1.2rem;
+  padding-top: 1.2rem;
   font-family: 'Poppins', sans-serif;
+  margin-right: 1.2rem;
+}
+
+.pricing-card .btn {
+  display: inline-block;
+  padding: 0.8rem 6.5em;
+  border: 2px solid #fff;
+  border-radius: 6px;
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+  
+}
+
+.pricing-card .btn:hover {
+  background: #fff;
+  color: #4b006e;
 }
 
 /* Examples */
-.examples {
-  padding: 2em 10em; /* add side spacing */
-}
-
-.examples h2 {
-  color: #4a0d4a;
-  font-size: 2em;
-  font-weight: bold;
+.examples h3 {
+  color: #4b006e;
+  font-size: 1.5em;
   margin-bottom: 1rem;
-  margin-left: 0em;
   font-family: 'Lora', serif;
 }
-.examples .example {
-  background: #f0efef;
-  border-radius: 8px;
-  padding: 1rem;
-  padding-left: 2em;
-  margin-bottom: 1rem;
+
+.example {
+  margin-bottom: 1.5rem;
+  font-family: 'Poppins', sans-serif;;
 }
 
-.example p{
-  margin-left: 1em;
-  font-size: 1.2em;
-  font-family: 'Poppins', sans-serif;
+.example-header {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+  margin-bottom: 0.5rem;
 }
 
-.example li {
-  margin-left: 3em;
-  font-family: 'Poppins', sans-serif;
+.example-header img {
+  width: 3em;
+  height: 3em;
 }
 
-.examples .cost {
+.example-header p {
+  margin: 0;
+}
+
+.example ul {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.cost {
   color: #AD1AAC;
-  font-weight: bold;
 }
+
 
 /* Responsive */
 /* Responsive */
@@ -1050,7 +1134,77 @@ h2 {
     font-size: 1em;
     margin-left: 0.5em;
   }
+    /* --- How it Works --- */
+  .how-it-works h2 {
+    margin-left: 5vh; /* less indent */
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .how-it-works .steps {
+    gap: 2em; /* tighter spacing */
+    flex-direction: column; /* stack vertically */
+  }
+
+  .how-it-works .circle img {
+    width: 25vh;
+    height: 25vh;
+  }
+
+  .how-it-works .arrow {
+    font-size: 2.5rem;
+    height: auto; /* shrink */
+    margin: 1em 0;
+    display: none; /* hide arrow on small screens */
+  }
+
+  .how-it-works p {
+    font-size: 1rem;
+    max-width: 250px;
+  }
+
+  /* --- Check-in --- */
+  .check-in h2 {
+    margin-left: 0;
+    text-align: center;
+    font-size: 1.5rem;
+  }
+
+  .check-steps {
+    grid-template-columns: 1fr; /* single column */
+  }
+
+  .check-step {
+    padding: 1.5em;
+  }
+
+  /* --- Pricing & Examples --- */
+  .pricing-examples {
+    padding: 2rem 1rem;
+  }
+
+  .pricing-container {
+    grid-template-columns: 1fr; /* stack */
+  }
+
+  .pricing-card {
+    margin-bottom: 2rem;
+  }
+
+  .pricing-card .btn {
+    padding: 0.8rem 3em;
+  }
+
+  .example-header {
+    gap: 1em;
+  }
+
+  .example-header img {
+    width: 2.5em;
+    height: 2.5em;
+  }
 }
+
 
 @media (max-width: 468px) {
   /* Even tighter layout for phones */
@@ -1109,5 +1263,80 @@ h2 {
   .example li {
     font-size: 0.95em;
     margin-left: 0;
+  }
+    /* --- How it Works --- */
+  .how-it-works h2 {
+    margin-left: 0;
+    font-size: 1.3rem;
+  }
+
+  .how-it-works .circle img {
+    width: 18vh;
+    height: 18vh;
+  }
+
+  .how-it-works .arrow {
+    font-size: 2rem;
+    margin: 0.5em 0;
+  }
+
+  .how-it-works p {
+    font-size: 0.9rem;
+  }
+
+  /* --- Check-in --- */
+  .check-in {
+    padding: 2rem 1rem;
+  }
+
+  .check-in h2 {
+    font-size: 1.3rem;
+  }
+
+  .check-step {
+    padding: 1em;
+  }
+
+  .check-step img {
+    width: 40px;
+  }
+
+  /* --- Pricing & Examples --- */
+  .pricing-examples h2 {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+
+  .price-tag {
+    font-size: 1.1rem;
+    padding: 0.4rem 1.5em;
+  }
+
+  .pricing-card {
+    padding: 1.5rem;
+  }
+
+  .pricing-card .btn {
+    padding: 0.6rem 2.5em;
+    font-size: 0.9rem;
+  }
+
+  .examples h3 {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .example-header {
+    flex-direction: row;
+    gap: 0.5em;
+  }
+
+  .example-header img {
+    width: 2em;
+    height: 2em;
+  }
+
+  .cost {
+    font-size: 0.9rem;
   }
 }
