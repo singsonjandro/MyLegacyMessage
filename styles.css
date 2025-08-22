@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 /* General Reset */
 * {
   margin: 0;
@@ -103,6 +104,7 @@ header nav a {
   font-size: 1.2em;
   text-align: left;
   margin-right: 4em;
+  font-family: 'Poppins', sans-serif;
 }
 .btn-solid {
   background: #6c2a8c;
@@ -123,10 +125,18 @@ header nav a {
   font-size: 2em;
   font-family: 'Lora', serif;
 }
+.podcast p {
+  font-size: 1.2em;
+  font-family: 'Poppins', sans-serif;
+}
 .podcast-cards {
   display: flex;
   gap: 1.5rem;
   margin-top: 2rem;
+}
+.podcast-cards p {
+  font-size: 1em;
+  font-family: 'Poppins', sans-serif;
 }
 .card {
   background: #f4f4f4;
@@ -139,7 +149,7 @@ header nav a {
   width: 100%;
   border-radius: 10px;
 }
-.card p strong {
+.card strong {
   color: #6c2a8c; /* your theme purple */
   font-family: 'Lora', serif;
   font-size: 1.15em;
@@ -151,6 +161,8 @@ header nav a {
   border-radius: 5px;
   display: inline-block;
   margin-top: 1rem;
+  font-family: 'Poppins', sans-serif;
+  align-items: center;
 }
 
 /* Stats */
@@ -181,11 +193,32 @@ header nav a {
 .stats-total {
   flex: 1; /* take remaining space */
   text-align: center; /* center text */
+  color: white;
 }
 
-.stats h2 {
-  font-size: 2rem;
+.stats-total h2 {
+  font-size: 2.5rem;
   font-weight: bold;
+  color: #fff;
+}
+
+.stats-total p {
+  font-size: 1.5rem;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+}
+
+.stats-episodes h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+}
+
+.stats-episodes p {
+  font-size: 1.5rem;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
 }
 
 .stats .icons img {
@@ -373,6 +406,13 @@ strong {
   font-family: 'Lora', serif;
 }
 
+.about-section p {
+  font-size: 1.2em;
+  line-height: 1.6;
+  margin-bottom: 2em;
+  font-family: 'Poppins', sans-serif;
+}
+
 /* Mission & Vision */
 .mission-vision {
   display: grid;
@@ -389,7 +429,8 @@ strong {
 
 .mission-vision .text {
   margin-top: 1em;
-  font-size: 1em;
+  font-size: 1.2em;
+  font-family: 'Poppins', sans-serif;
 }
 
 .mission-vision h3 {
@@ -428,19 +469,19 @@ strong {
 .team-members {
   display: flex;
   justify-content: center;
-  gap: 2.5em;
+  gap: 4em;
   flex-wrap: wrap;
 }
 .team .member-mark img {
-  width: 180px;
-  height: 180px;
+  width: 20em;
+  height: 20em;
   border-radius: 50%;
   object-fit: cover;
   object-position: top;
 }
 .team .member img {
-  width: 180px;
-  height: 180px;
+  width: 20em;
+  height: 20em;
   border-radius: 50%;
   object-fit: cover;
 }
@@ -448,6 +489,25 @@ strong {
   margin-top: 1em;
   font-size: 1.2rem;
   font-family: 'Lora', serif;
+}
+
+.team .member-mark h4 {
+  margin-top: 1em;
+  font-size: 1.2rem;
+  font-family: 'Lora', serif;
+}
+.team .member p {
+  font-size: 1.2rem;
+  color: #666;
+  margin-top: 0.5em;
+  font-family: 'Poppins', sans-serif;
+}
+
+.team .member-mark p {
+  font-size: 1.2rem;
+  color: #666;
+  margin-top: 0.5em;
+  font-family: 'Poppins', sans-serif;
 }
 
 /* Our Story */
@@ -482,8 +542,8 @@ strong {
   display: grid;
   grid-template-columns: 60px 1fr; /* left column fixed for icons, right column flexible */
   align-items: flex-start;
-  max-width: 900px;
-  margin: 0 auto 2em auto;
+  max-width: 80em;
+  margin: 0 2vh 2em 20vh;
   gap: 1.5em;
 }
 
@@ -494,9 +554,10 @@ strong {
 }
 
 .about-us-our-story .story-text p {
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 1.6;
   margin: 0;
+  font-family: 'Poppins', sans-serif;
 }
 
 .about-us-our-story strong {
@@ -517,7 +578,7 @@ strong {
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   max-width: 120em;
-  margin: 2rem auto; /* centers form */
+  margin: 1vh auto; /* centers form */
 }
 
 .form-grid {
