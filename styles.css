@@ -864,6 +864,12 @@ strong {
     padding: 1.5em;
   }
 
+  .play-btn {
+    width: 60px;
+    height: 60px;
+    font-size: 2rem;
+  }
+
   .faq-question {
     color: #000;
   }
