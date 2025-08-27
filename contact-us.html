@@ -29,45 +29,50 @@
         </p>
     </section>
     <!-- Contact Form -->
-    <section class="contact-form">
-    <form action="https://formspree.io/f/mgvzjdgo" method="POST" class="contact-form">
+   <!-- Contact Form -->
+<section class="contact-form">
+  <form name="contact" method="POST" data-netlify="true" class="contact-form">
+    <!-- Hidden input required by Netlify -->
+    <input type="hidden" name="form-name" value="contact" />
+
     <div class="form-grid">
-        <!-- Name Field -->
-        <div class="form-group">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" required>
-        </div>
+      <!-- Name Field -->
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+      </div>
 
-        <!-- Contact Number Field -->
-        <div class="form-group">
-            <label for="contact-number">Contact Number (Optional)</label>
-            <input type="tel" id="contact-number" name="contact-number">
-        </div>
+      <!-- Contact Number Field -->
+      <div class="form-group">
+        <label for="contact-number">Contact Number (Optional)</label>
+        <input type="tel" id="contact-number" name="contact-number">
+      </div>
 
-        <!-- Country Field (under Name) -->
-        <div class="form-group">
-            <label for="country">Country</label>
-            <input type="text" id="country" name="country" required>
-        </div>
+      <!-- Country Field -->
+      <div class="form-group">
+        <label for="country">Country</label>
+        <input type="text" id="country" name="country" required>
+      </div>
 
-        <!-- Email Field (under Contact Number) -->
-        <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required>
-        </div>
+      <!-- Email Field -->
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+      </div>
 
-        <!-- Message / Enquire (full width across 2 cols) -->
-        <div class="form-group form-full">
-            <label for="message">Message / Enquire</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
-        </div>
+      <!-- Message / Enquire -->
+      <div class="form-group form-full">
+        <label for="message">Message / Enquire</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+      </div>
     </div>
 
     <!-- Submit Button -->
     <div class="form-submit">
-        <button type="submit">Submit</button>
+      <button type="submit">Submit</button>
     </div>
-</form>
+  </form>
+</section>
     </section>
         <div id="footer-placeholder"></div>
     <script>
@@ -85,4 +90,5 @@
         document.getElementById("footer-placeholder").innerHTML = data;
         });
         </script>
+
     </body>
